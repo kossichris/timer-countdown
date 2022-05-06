@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "CountDown",
+    "short_name": "count-down",
+    "version": "0.0.1",
+    "description": "Simple count down for personal use",
+   
+    "icons": {
+      "16": "/icons/icon.png",
+      "32": "/icons/icon.png",
+      "64": "/icons/icon.png",
+      "128": "/icons/icon.png"
+    },
+    "permissions": ["activeTab"],
+    "content_scripts": [
+      {
+        "matches": ["https://*/*", "http://*/*"],
+        "js": ["inject.js"]
+      }
+    ],
+    "host_permissions": ["<all_urls>"],
+    "action": {
+      "default_popup": "index.html"
+    }
+  }

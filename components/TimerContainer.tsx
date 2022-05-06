@@ -68,7 +68,7 @@ export const TimerContainer = ({
 
   return (
     <div className=" mt-2 rounded-xl  md:mt-20">
-      <div className="grid grid-cols-2 gap-4 rounded-xl py-6 px-10 md:mt-2 md:flex md:items-center  md:justify-between md:px-6 md:py-8 ">
+      <div className="grid grid-cols-1 gap-4 rounded-xl py-6 px-10 md:mt-2 md:flex md:items-center  md:justify-between md:px-6 md:py-8 ">
         <NumberBox num={days} unit="Days" flip={daysFlip} />
         <span className=" -mt-8 hidden text-5xl font-normal text-gray-50 md:inline-block md:text-7xl ">
           :

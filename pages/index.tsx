@@ -39,7 +39,7 @@ const Home: NextPage = () => {
 
       if (difference <= 0) {
         clearInterval(updateTime)
-        setMessage('The Launch Has Started')
+        setMessage('The Task Has Started')
         setDays(0)
         setHours(0)
         setMinutes(0)
@@ -55,6 +55,11 @@ const Home: NextPage = () => {
   const handleClick = () => {
     setTime(newTime)
     console.log(time)
+    setNewTime(0)
+  }
+
+  const handleOneHourClick = () => {
+    setTime(0.041)
     setNewTime(0)
   }
 
@@ -80,8 +85,19 @@ const Home: NextPage = () => {
       />
       <TimerInput
         value={newTime}
+        title="Set New Round"
         handleClick={handleClick}
         handleChange={handleChange}
+        handleOneHourClick={function (): void {}}
+      />
+
+      <TimerInput
+        value={newTime}
+        type="ONE"
+        title="Set new 1 hour Round"
+        handleClick={handleClick}
+        handleChange={handleChange}
+        handleOneHourClick={handleOneHourClick}
       />
 
       <Footer />
